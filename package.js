@@ -21,7 +21,7 @@ Package.onUse(function (api) {
     // Accounts.oauth.registerService) exists.
     api.use('accounts-password', {weak: true});
 
-    api.use('anti:i18n', {weak: true});
+    api.use('anti:i18n@0.4.3', {weak: true});
 
     api.addFiles([
         'accounts-ui-semantic-ui.js',
