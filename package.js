@@ -1,6 +1,6 @@
 Package.describe({
     name: 'jaredhliu:accounts-ui-semantic-ui',
-    version: '1.0.0',
+    version: '1.0.1',
     summary: 'Semantic UI styled accounts-ui',
     git: 'https://github.com/jaredliu2018/accounts-ui-semantic-ui.git',
     documentation: 'README.md'
@@ -9,7 +9,7 @@ Package.describe({
 
 Package.onUse(function (api) {
     api.versionsFrom('1.0.4.1');
-    api.use(['tracker', 'service-configuration', 'accounts-base', 'underscore', 'templating', 'session'], 'client');
+    api.use(['tracker', 'service-configuration', 'accounts-base', 'underscore', 'templating', 'session', 'anti:i18n@0.4.3'], 'client');
 
     // Export Accounts (etc) to packages using this one.
     api.imply('accounts-base', ['client', 'server']);
@@ -20,8 +20,6 @@ Package.onUse(function (api) {
     // Allow us to directly test if accounts-password (which doesn't use
     // Accounts.oauth.registerService) exists.
     api.use('accounts-password', {weak: true});
-
-    api.use('anti:i18n@0.4.3', {weak: true});
 
     api.addFiles([
         'accounts-ui-semantic-ui.js',
